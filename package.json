@@ -1,0 +1,9 @@
+{
+  "name": "reg-account-docs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "python site/prepare_deploy.py",
+    "start": "npx serve -s deploy"
+  }
+}
