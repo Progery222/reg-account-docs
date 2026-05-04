@@ -46,30 +46,7 @@ with open(os.path.join(DEST, ".gitignore"), "w") as f:
     f.write("*.py\n__pycache__/\n.DS_Store\nThumbs.db\n")
 print("Created .gitignore")
 
-# 5. Create vercel.json for static site config
-with open(os.path.join(DEST, "vercel.json"), "w") as f:
-    f.write("""{
-  "buildCommand": "",
-  "outputDirectory": ".",
-  "framework": null,
-  "rewrites": [],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
-      ]
-    },
-    {
-      "source": "/chats/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800, immutable" }
-      ]
-    }
-  ]
-}
-""")
-print("Created vercel.json")
+
 
 # Count files
 total_files = 0
